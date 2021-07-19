@@ -1,0 +1,127 @@
+.App {
+  text-align: center;
+  display: flex;
+  justify-content: flex-end;
+  align-items: baseline;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+.date-picker {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+.date-picker .react-datepicker-wrapper {
+  margin-left: 30px;
+}
+
+.date-picker .react-datepicker-wrapper .react-datepicker__input-container input {
+  appearance: none;
+  background-color: lightgrey;
+  border-color: #fff;
+  border-width: 1px;
+  border-radius: 0;
+  padding: .5rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  text-align: center;
+}
+
+.primary-button {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+  border: 0;
+  font-weight: 400;
+  background: #69f5ab;
+  line-height: 1;
+  padding: 15px 40px;
+  font-family: 'IBM Plex Mono',monospace;
+  border-radius: 50px;
+  box-shadow: 0px 4px 20px rgb(0 0 0 / 70%);
+  vertical-align: middle;
+  margin-left: 20px;
+  overflow: hidden;
+}
+
+.primary-button:hover {
+  cursor: pointer;
+  background-size: 100% 6px;
+  transition-delay: 0s;
+}
+
+.primary-button:hover::before, .primary-button:active::before {
+  transform: translate3d(0,0,0) scale3d(1,1,1);
+  transition: transform .4s cubic-bezier(0.1,0,0.3,1);
+}
+.primary-button::before {
+  top: -110%;
+  left: -10%;
+  width: 120%;
+  height: 0;
+  padding-bottom: 120%;
+  border-radius: 50%;
+  transform: translate3d(0,68%,0) scale3d(0,0,0);
+  content: '';
+  position: absolute;
+  background: #fff;
+}
+
+.primary-button:hover::after, .primary-button:active::after {
+  transform: translate3d(0,0,0);
+  transition-duration: .05s;
+  transition-delay: .4s;
+  transition-timing-function: linear;
+}
+
+.primary-button::after {
+  content: '';
+  position: absolute;
+  background: #fff;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translate3d(0,-100%,0);
+  transition: transform .4s cubic-bezier(0.1,0,0.3,1);
+}
+
+.primary-button strong {
+  display: block;
+  position: relative;
+  z-index: 3;
+  font-weight: 400;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
