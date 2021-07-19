@@ -1,7 +1,5 @@
 import { Component } from "react";
-import WeeklyInvoice from "./WeeklyInvoice";
 import "./Invoices.css";
-import moment from "moment";
 import { withRouter } from "react-router";
 import { formatDate } from  "./../utils/index";
 
