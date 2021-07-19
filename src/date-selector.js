@@ -7,8 +7,6 @@ class DateSelector extends Component {
   constructor(props) {
     super(props);
 
-    this.state = { startDate: new Date(), endDate: new Date() }
-
     this.handleEndDateChange = this.handleEndDateChange.bind(this);
     this.handleStartDateChange = this.handleStartDateChange.bind(this);
   }
@@ -23,12 +21,12 @@ class DateSelector extends Component {
 
     render() {
 
-        const { startDate, endDate } = this.state;
+        const { start_date, end_date } = this.props;
 
         return(
             <div className="date-picker">
-                <DatePicker selected={startDate} onChange={(date) => this.handleStartDateChange(date)}/>
-                <DatePicker selected={endDate} onChange={(date) => this.handleEndDateChange(date)}/>
+                <DatePicker selected={start_date} onChange={(date) => this.props.selectStartDate(date)}/>
+                <DatePicker selected={end_date} onChange={(date) => this.props.selectEndDate(date)}/>
             </div>
         )
     }
