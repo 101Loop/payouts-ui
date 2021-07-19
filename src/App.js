@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import { Component } from 'react';
 import DateSelector from './date-selector';
 import { mockData } from "./mockData";

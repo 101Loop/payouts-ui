@@ -1,5 +1,4 @@
 import { Component } from "react";
-import "./Invoices.css";
 import { withRouter } from "react-router";
 import { formatDate } from  "./../utils/index";
 

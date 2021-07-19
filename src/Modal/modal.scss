@@ -1,0 +1,32 @@
+.custom-modal {
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    right: 0;
+    margin: auto;
+    max-width: 60%;
+    max-height: 60%;
+    top: 15%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+
+    & > .modal-content {
+        background-color: lightgrey;
+        padding: 10px;
+        & > .close-modal {
+            text-align: end;
+            margin-right: 20px;
+            font-size: 20px;
+            &:hover {
+                cursor: pointer;
+            }
+            & > .modal-head {
+                font-weight: 800;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+}
+
